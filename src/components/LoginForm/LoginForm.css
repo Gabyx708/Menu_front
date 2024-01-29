@@ -1,0 +1,17 @@
+#loginForm {
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 6px 16px;
+  border: 3px solid #000;
+}
+
+form {
+  text-align: center;
+  width: 600px;
+}
+
+.containerForm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
