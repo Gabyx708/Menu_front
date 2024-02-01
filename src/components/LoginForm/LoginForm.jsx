@@ -5,7 +5,7 @@ import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
 import Alert from '@mui/material/Alert';
 
 import { loginUser } from "../../services/Api/LoginUser.js";
-import { saveToken } from "../../services/UserServices.js";
+import { saveToken, saveUserData } from "../../services/UserServices.js";
 import { useNavigate } from "react-router-dom";
 
 import Card from "@mui/material/Card";
@@ -38,6 +38,7 @@ export default function LoginForm() {
     if (responseStatus == 200){
 
       saveToken(result.data.token);
+      saveUserData(result.data)
       navigate("/home");  
     } else {
       SetAlert(alertComponent);
