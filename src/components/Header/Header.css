@@ -1,0 +1,10 @@
+.header {
+    position: relative;
+    width: 100%;
+    height: 20vh; /* Esto crea la mitad inferior de un círculo */
+    background: var(--color-header);
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius:30%;
+    justify-content: center;
+    z-index: -900;
+  }

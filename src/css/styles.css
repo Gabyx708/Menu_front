@@ -1,0 +1,33 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#main_container{
+  width: 90%;
+  margin: auto;
+}
+
+:root {
+  --color-slider: #1D1E22;
+  --color-slider-claro: #44464E;
+  --color-acento: #e3aa14;
+  --color-header: #0e88ec;
+  --color-body: #EFEFEF;
+  --green-light: #97cc97;
+  --green-dark : #62BC47;
+  --color-footer: var(--color-header) /*#48586D*/;
+  --color-nav: none;
+}
+
+body {
+  background-color: var(--color-body);
+  width: 100%;
+  height: 100%;
+}
+
+
+.shadowGeneric{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 8px 18px;
+
+}
