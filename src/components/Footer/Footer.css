@@ -1,0 +1,7 @@
+#footer{
+    background-color: var(--color-header);
+    bottom: 0;
+    position: fixed;
+    height: 20vh;
+    width: 100vw;
+}

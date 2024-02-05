@@ -4,13 +4,14 @@ import LastOrder from "../components/LastOrder/LastOrder";
 import "../css/HomePage.css";
 import { GetUserData } from "../services/Api/GetUserDate";
 import { getUserData, saveUserData } from "../services/UserServices";
-import Header from "../components/Header/Header"
+import Header from "../components/Header/Header";
 import MainButton from "../components/MainButton/MainButton";
 
-import RestoreIcon from '@mui/icons-material/Restore';
-import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import MenuBookIcon from '@mui/icons-material/MenuBook';
+import RestoreIcon from "@mui/icons-material/Restore";
+import PrecisionManufacturingIcon from "@mui/icons-material/PrecisionManufacturing";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import MenuBookIcon from "@mui/icons-material/MenuBook";
+import Footer from "../components/Footer/Footer";
 
 const obtainUserData = async () => {
   let idUser = getUserData().id;
@@ -24,23 +25,41 @@ export default function HomePage() {
     obtainUserData();
   });
 
+  const body = (
+    <div id="main_container">
+      <section className="badgeds_container">
+        <CostUser />
+        <LastOrder />
+      </section>
+
+      <section>
+        <div id="buttons_section">
+          <MainButton
+            text="PEDIR"
+            Icon={() => <MenuBookIcon fontSize="large" />}
+          />
+          <MainButton
+            text="PLANIFICAR"
+            Icon={() => <CalendarMonthIcon fontSize="large" />}
+          />
+          <MainButton
+            text="HISTORIAL"
+            Icon={() => <RestoreIcon fontSize="large" />}
+          />
+          <MainButton
+            text="AUTOMATIZAR"
+            Icon={() => <PrecisionManufacturingIcon fontSize="large" />}
+          />
+        </div>
+      </section>
+    </div>
+  );
+
   return (
     <>
       <Header />
-      <div id="main_container">
-        <section className="badgeds_container">
-          <CostUser />
-          <LastOrder />
-        </section>
-
-        <section>
-          <MainButton text="PEDIR" Icon={() => <MenuBookIcon fontSize="large" />} />
-          <MainButton text="PLANIFICAR" Icon={() => <CalendarMonthIcon fontSize="large" />} />
-          <MainButton text="HISTORIAL" Icon={() => <RestoreIcon fontSize="large" />} />
-          <MainButton text="AUTOMATIZAR" Icon={() => <PrecisionManufacturingIcon fontSize="large" />} />
-        </section>
-        
-      </div>
+      {body}
+      <Footer/>
     </>
   );
 }

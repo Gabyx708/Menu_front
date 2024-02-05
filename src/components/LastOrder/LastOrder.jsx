@@ -40,7 +40,7 @@ export default function LastOrder() {
 
   return (
     <>
-      <Card className="shadowGeneric" sx={{ width: "90%", height: "auto" }}>
+      <Card className="shadowGeneric" sx={{height: "auto" }}>
         <CardContent>
           <Typography gutterBottom variant="subtitle2" component="div">
             <p>ultimo pedido realizado el: {lastOrderDate}</p>
